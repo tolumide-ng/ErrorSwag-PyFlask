@@ -10,12 +10,13 @@ autopep8 = "*"
 [packages]
 flask = "*"
 flask-sqlalchemy = "*"
-psycopg2 = "*"
 flask-migrate = "*"
 flask-script = "*"
 marshmallow = "*"
 flask-bcrypt = "*"
 pyjwt = "*"
+psycopg2 = "*"
+python-dotenv = "*"
 
 [requires]
 python_version = "3.7"

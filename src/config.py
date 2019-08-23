@@ -1,6 +1,8 @@
 # /src/config.py_
 
 import os
+from dotenv import load_dotenv
+load_dotenv()
 
 
 class Development(object):
@@ -11,6 +13,7 @@ class Development(object):
     TESTING = False
     JWT_SECRET_KEY = os.getenv('JWT_SECRET_KEY')
     SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL')
+    SQLALCHEMY_TRACK_MODIFICATIONS = True
 
 
 class Production(object):
