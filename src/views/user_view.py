@@ -1,4 +1,4 @@
-# src/views/UserView
+# src/views/user_view
 
 from flask import request, json, Response, Blueprint, g
 from marshmallow import ValidationError
@@ -94,7 +94,6 @@ def update():
     """
     try:
         req_data = request.get_json()
-        print('the request body>>>>>>>>>', req_data)
         # if req_data['email'] == None:
         #     return custom_response({'error': 'You can only update username and password'}, 403)
         data = user_schema.load(req_data, partial=True)
@@ -121,7 +120,7 @@ def delete():
     # return custom_response({'message': 'You do not have permission to delete users'}, 403)
 
 
-@user_api.route('/me', method=['GET'])
+@user_api.route('/me', methods=['GET'])
 @Auth.auth_required
 def get_me():
     """
