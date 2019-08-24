@@ -102,7 +102,7 @@ def update():
 
     user = User.get_one_user(g.user.get('id'))
     user.update(data)
-    ser_user = update_schema.dump(user)
+    ser_user = user_schema.dump(user)
     return custom_response(ser_user, 200)
 
 
