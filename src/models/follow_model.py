@@ -45,10 +45,11 @@ class Follow(db.Model):
     def __repr__(self):
         return '<id {}>'.format(self.id)
 
-    class FollowSchema(Schema):
-        """
-        Follow Schema
-        """
-        id = fields.Int(dump_only=True)
-        followee_id = fields.Int(required=True)
-        follower_id = fields.Int(required=True)
+
+class FollowSchema(Schema):
+    """
+    Follow Schema
+    """
+    id = fields.Int(dump_only=True)
+    followee_id = fields.Int(required=True)
+    follower_id = fields.Int(required=True)

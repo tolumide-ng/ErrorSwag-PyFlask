@@ -16,9 +16,8 @@ def create_app(env_name):
 
     app.config.from_object(app_config[env_name])
 
-    # initializing bcrypt
+    # initializing bcrypt and db
     bcrypt.init_app(app)
-
     db.init_app(app)
 
     @app.route('/', methods=['GET'])
