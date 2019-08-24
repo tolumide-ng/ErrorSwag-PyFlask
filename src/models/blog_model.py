@@ -13,7 +13,7 @@ class Blog(db.Model):
     __tablename__ = 'blogs'
 
     id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String(128), nullable=False)
+    title = db.Column(db.Text, nullable=False)
     contents = db.Column(db.Text, nullable=False)
     description = db.Column(db.Text, nullable=False)
     author_id = db.Column(
@@ -62,6 +62,7 @@ class BlogSchema(Schema):
     id = fields.Int(dump_only=True)
     title = fields.Str(required=True)
     contents = fields.Str(required=True)
+    description = fields.Str(required=True)
     author_id = fields.Int(required=True)
     created_at = fields.DateTime(dump_only=True)
     modified_at = fields.DateTime(dump_only=True)
