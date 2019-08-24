@@ -71,7 +71,7 @@ class Auth():
                 )
             token = request.headers.get('api-token')
             data = Auth.decode_token(token)
-            if data('error'):
+            if data['error']:
                 return Response(
                     mimetype='application/json',
                     response=json.dumps(data['error']),
@@ -79,14 +79,17 @@ class Auth():
                 )
 
             user_id = data['data']['user_id']
+            # admin = data['data']['admin']
+
             check_user = User.get_one_user(user_id)
             if not check_user:
                 return Response(
                     mimetype='application/json',
                     response=json.dumps(
-                        {'error': 'user does not exist, invalid toekn'}),
+                        {'error': 'user does not exist, invalid token'}),
                     status=400
                 )
             g.user = {'id': user_id}
+            # g.user = {'admin': admin}
             return func(*args, **kwargs)
         return decorated_auth

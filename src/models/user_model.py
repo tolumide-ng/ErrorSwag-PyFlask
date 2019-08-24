@@ -2,7 +2,7 @@
 from marshmallow import fields, Schema
 import datetime
 from . import db, bcrypt
-from .blog_model import BlogSchema
+# from .blog_model import BlogSchema
 
 
 class User(db.Model):
@@ -16,20 +16,21 @@ class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(128), nullable=False)
     email = db.Column(db.String(128), unique=True, nullable=False)
+    admin = db.Column(db.Boolean, default=False, unique=False)
     password = db.Column(db.String(128), nullable=True)
     created_at = db.Column(db.DateTime)
     modified_at = db.Column(db.DateTime)
-    blogs = db.relationship('Blogs', backref='author', lazy='dynamic')
+    # blogs = db.relationship('Blogs', backref='author', lazy='dynamic')
 
     # class constructor
     def __init__(self, data):
         """
         Class constructor
         """
-        self.username, = data.get('username')
-        self.email, = data.get('email')
-        self.password, = self.__generate_hash(data.get('password'))
-        self.created_at, = datetime.datetime.utcnow()
+        self.username = data.get('username')
+        self.email = data.get('email')
+        self.password = self.__generate_hash(data.get('password'))
+        self.created_at = datetime.datetime.utcnow()
         self.modified_at = datetime.datetime.utcnow()
 
     def save(self):
@@ -76,8 +77,9 @@ class UserSchema(Schema):
     """
     id = fields.Int(dump_only=True)
     username = fields.Str(required=True)
+    admin = fields.Bool(dump_only=True)
     email = fields.Email(required=True)
-    password = fields.Str(required=True)
+    password = fields.Str(required=True, load_only=True)
     created_at = fields.DateTime(dump_only=True)
     modified_at = fields.DateTime(dump_only=True)
-    blogs = fields.Nested(BlogSchema, many=True)
+    # blogs = fields.Nested(BlogSchema, many=True)
