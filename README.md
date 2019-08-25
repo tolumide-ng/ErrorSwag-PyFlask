@@ -18,24 +18,24 @@ ErroSwag Pyflask rebuilds the simulations backend application in python and flas
 
 ### Working Routes
 
-| Routes                                                                | Purpose                            | Method |
-| :-------------------------------------------------------------------- | :--------------------------------- | :----: |
-| https://errosandswags.herokuapp.com/api/v1/users                      | Singup on Errorswag                |  POST  |
-| https://errosandswags.herokuapp.com/api/v1/users                      | Get all users                      |  GET   |
-| https://errosandswags.herokuapp.com/api/v1/users/login                | Login to the application           |  POST  |
-| https://errosandswags.herokuapp.com/api/v1/users/<int: id>            | View secific user profile          |  GET   |
-| https://errosandswags.herokuapp.com/api/v1/users                      | Update your profile                |  PUT   |
-| https://errosandswags.herokuapp.com/api/v1/users/me                   | Delete your profile                | DELETE |
-| https://errosandswags.herokuapp.com/api/v1/users/me                   | View your profile                  |  GET   |
-| https://errosandswags.herokuapp.com/api/v1/blogs/                     | Create a blogpost                  |  POST  |
-| https://errosandswags.herokuapp.com/api/v1/blogs/                     | View all blogposts                 |  GET   |
-| https://errosandswags.herokuapp.com/api/v1/blogs/<int: id>            | View a specific blog post          |  GET   |
-| https://errosandswags.herokuapp.com/api/v1/blogs/<int: id>            | Edit a specfic blogpost            |  PUT   |
-| https://errosandswags.herokuapp.com/api/v1/blogs/<int: id>            | Delete a specific blogpost         | DELETE |
-| https://errosandswags.herokuapp.com/api/v1/socials/follow/<int: id>   | Follow a specific user             |  POST  |
-| https://errosandswags.herokuapp.com/api/v1/socials/unfollow/<int: id> | Unfollow a specific user           | DELETE |
-| https://errosandswags.herokuapp.com/api/v1/socials/followers          | View all your followers            |  GET   |
-| https://errosandswags.herokuapp.com/api/v1/socials/followings         | View users users you are following |  GET   |
+| Routes                                                                    | Purpose                            | Method |
+| :------------------------------------------------------------------------ | :--------------------------------- | :----: |
+| https://forswagsanderrors.herokuapp.com/api/v1/users                      | Singup on Errorswag                |  POST  |
+| https://forswagsanderrors.herokuapp.com/api/v1/users                      | Get all users                      |  GET   |
+| https://forswagsanderrors.herokuapp.com/api/v1/users/login                | Login to the application           |  POST  |
+| https://forswagsanderrors.herokuapp.com/api/v1/users/<int: id>            | View secific user profile          |  GET   |
+| https://forswagsanderrors.herokuapp.com/api/v1/users                      | Update your profile                |  PUT   |
+| https://forswagsanderrors.herokuapp.com/api/v1/users/me                   | Delete your profile                | DELETE |
+| https://forswagsanderrors.herokuapp.com/api/v1/users/me                   | View your profile                  |  GET   |
+| https://forswagsanderrors.herokuapp.com/api/v1/blogs/                     | Create a blogpost                  |  POST  |
+| https://forswagsanderrors.herokuapp.com/api/v1/blogs/                     | View all blogposts                 |  GET   |
+| https://forswagsanderrors.herokuapp.com/api/v1/blogs/<int: id>            | View a specific blog post          |  GET   |
+| https://forswagsanderrors.herokuapp.com/api/v1/blogs/<int: id>            | Edit a specfic blogpost            |  PUT   |
+| https://forswagsanderrors.herokuapp.com/api/v1/blogs/<int: id>            | Delete a specific blogpost         | DELETE |
+| https://forswagsanderrors.herokuapp.com/api/v1/socials/follow/<int: id>   | Follow a specific user             |  POST  |
+| https://forswagsanderrors.herokuapp.com/api/v1/socials/unfollow/<int: id> | Unfollow a specific user           | DELETE |
+| https://forswagsanderrors.herokuapp.com/api/v1/socials/followers          | View all your followers            |  GET   |
+| https://forswagsanderrors.herokuapp.com/api/v1/socials/followings         | View users users you are following |  GET   |
 
 Use python appp.run() to run this application
 
