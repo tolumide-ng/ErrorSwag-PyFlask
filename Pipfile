@@ -53,6 +53,7 @@ wrapt = "==1.11.2"
 zipp = "==0.6.0"
 Flask-SQLAlchemy = "==2.4.0"
 Werkzeug = "==0.15.5"
+coveralls = "*"
 
 [requires]
 python_version = "3.7"
