@@ -17,4 +17,5 @@ before_script:
 # script to run migration
 # command to run tests
 script: pytest --cov=src
-after_successs: coveralls
+after_successs:
+  - coveralls
