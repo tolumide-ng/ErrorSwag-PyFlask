@@ -13,10 +13,9 @@ env:
 install:
   - pip install pipenv
   - pipenv install
-# before_script:
-#   - psql -c "CREATE USER tolumide WITH PASSWORD null;" -U postgres
-#   - psql -c 'create database errorswag;' -U postgres
-#   - psql -U postgres -d errorswag -c 'CREATE EXTENSION pg_trgm'
+before_script:
+  - psql -c "CREATE USER tolumide WITH PASSWORD 'password';" -U postgres
+  - psql -c 'create database errorswag;' -U postgres
 
 # create db
 # script to run migration
