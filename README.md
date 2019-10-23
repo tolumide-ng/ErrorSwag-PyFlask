@@ -2,6 +2,8 @@
 
 [![Coverage Status](https://coveralls.io/repos/github/tolumide-ng/ErrorSwag-PyFlask/badge.svg?branch=staging)](https://coveralls.io/github/tolumide-ng/ErrorSwag-PyFlask?branch=staging) [![Build Status](https://travis-ci.com/tolumide-ng/ErrorSwag-PyFlask.svg?branch=staging)](https://travis-ci.com/tolumide-ng/ErrorSwag-PyFlask)
 
+**https://forswagsanderrors.herokuapp.com/ is currently down as I am out of free apps on heroku** Please deploy the application using the the .env.sample
+
 ## About this Project:
 
 ErroSwag Pyflask rebuilds the simulations backend application in python and flask
